@@ -62,7 +62,7 @@
 - **Action:** Ask Ducky for exact error messages next time it reproduces.
 
 ### P2PDemoManager auto-creates demo objects unexpectedly
-- **Status:** OPEN
+- **Status:** FIXED (v2.61.1, 2026-10-15: `_enableP2PDemo` defaults to false; P2PDemo scene keeps it on)
 - **Reporter:** Ducky (2026-02-10)
 - **Severity:** High
 - **Description:** P2PDemoManager auto-creates level geometry (ground plane, obstacles) and player balls as soon as a lobby connects. Users installing the package for the first time see random cubes/planes spawning with no explanation. The demo content should be disabled by default or moved to a separate UPM sample package.

@@ -122,8 +122,8 @@ namespace EOSNative
         [SerializeField] private bool _showConsole = true;
 
         [Header("P2P Demo")]
-        [Tooltip("Auto-create the P2P Ball Demo manager (WASD ball game with spring physics sync)")]
-        [SerializeField] private bool _enableP2PDemo = true;
+        [Tooltip("Auto-create the P2P Ball Demo manager (WASD ball game with spring physics sync). Off by default so new installs don't spawn demo geometry; the P2PDemo scene turns it on.")]
+        [SerializeField] private bool _enableP2PDemo = false;
 
         /// <summary>
         /// The config currently assigned or loaded from Resources.
