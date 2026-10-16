@@ -4,6 +4,10 @@ A simple multiplayer demo using the raw EOS P2P interface. Players control a bal
 
 Built on the [P2P Transport Toolkit](p2p-transport.md) (Layer 1) with optional [Layer 2](architecture.md) integration via `DemoBallBehaviour`.
 
+## Turning It On
+
+The demo is off by default (since v2.61.1), so adding EOSManager to your own scene does not spawn demo geometry. Open `Demo/Scenes/P2PDemo.unity`, which has it enabled, or tick **P2P Demo > Enable P2P Demo** on the EOSManager component.
+
 ## Overview
 
 The demo uses a **peer-authority model**: each player owns their ball. Local physics runs normally through Unity's Rigidbody system. Remote balls are guided toward received positions via damped spring forces, producing smooth networked movement without jitter.

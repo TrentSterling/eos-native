@@ -21,7 +21,7 @@ namespace EOSNative.Lobbies
     {
         #region Singleton
 
-        private static EOSLobbyManager _instance;
+        internal static EOSLobbyManager _instance; // internal: health check, P2P and NetworkManager peek without auto-creating
         private static bool _shuttingDown;
         public static EOSLobbyManager Instance
         {

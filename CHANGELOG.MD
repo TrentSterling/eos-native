@@ -2,6 +2,16 @@
 
 All notable changes to the EOS-Native package will be documented in this file.
 
+## [2.61.2] - 2026-10-16
+
+### Fixed
+- **Package doesn't compile (CS0122)** - `EOSLobbyManager._instance` was `private`, but `EOSHealthCheck`, `EOSP2PManager` and `NetworkManager` read it directly (7 call sites) to check lobby state without auto-creating the manager. It is `internal` again.
+
+## [2.61.1] - 2026-10-15
+
+### Fixed
+- **P2P demo spawns geometry in fresh installs** - `EOSManager._enableP2PDemo` now defaults to `false`, so adding EOSManager to a new scene no longer auto-creates the ball demo (ground plane, obstacles, player balls) on lobby join. The bundled `Demo/Scenes/P2PDemo.unity` keeps it enabled. Existing scenes that already serialized `true` are unchanged; untick **P2P Demo > Enable P2P Demo** on EOSManager to turn it off there.
+
 ## [2.61.0] - 2026-02-16
 
 ### Fixed
